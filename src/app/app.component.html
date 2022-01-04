@@ -1,0 +1,289 @@
+
+<div class="container-fluid ">
+  <div class="container-fluid"  >
+    <!--table-->
+    <div class="row">
+  
+      <div class="col-sm-6">
+        <div style="padding-top: 13%;">
+          <div class="headinglogo effect6" style="text-align: center; padding:3%; border-radius: 20px;  " >
+            <h1 style="color:  #353b48; " >Covid-19 Symptoms Checker</h1>
+          </div>
+          <div style="padding:2%; color: red; font-size: medium; font-weight: 500;">
+            <marquee behaviour="scroll" direction="left">Wash your hands often | Avoid close contact | Cover your mouth and nose with a cloth face cover | Cover coughs and sneezes | Clean and disinfect | Monitor Your Health Daily</marquee>
+          </div>
+          <div >
+          <div *ngIf="!div1" style="text-align: center;padding: 2%;">
+            <img src="../assets/Images/240_F_337387862_RLupy2Ts2bONn0biXdCAROpFrS9cwjXE.jpg" width="70%" >
+          </div>
+
+
+          <div *ngIf="div1" class="testBlock " >
+
+            
+         
+            <div style="text-align: center; padding:3%">
+              <img src="../assets/Images/{{j+1}}.jpg" width="70%" class="symImg" >
+            </div>
+            <div style="text-align: center;" class="testHeading">
+              <h2>{{currentquestion}}</h2>
+              <div>
+                
+                <div style="text-align: center;">
+                  <div class="row">
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-4 p-3" style="text-align: right;">
+                       
+                        <button type="button"  (click)="yesnoFun($event)" class="btn btn-default" value="Yes">Yes</button>
+                      
+                    </div>
+                    <div class="col-4 p-3" style="text-align: left; ">
+                      
+                        <button type="button"  (click)="yesnoFun($event)" class="btn btn-default"  value="No">No</button>
+                     
+                    </div>
+
+                    <div class="col-2" style="text-align: end; padding: 3%;">
+                      <div >
+                        <button type="button"  (click)="nextQuestion()" class="btn btn-next">➤</button>                      </div>
+                    </div>
+
+                  </div>
+
+                   
+
+                  
+                </div>
+
+               
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="finalresult" *ngIf="result" style="text-align: center; padding:5%; ">
+            <h3 style="color: red; font-weight: 500;">Test Result
+            </h3>
+            <h4>Thank you for voluntarily taking this test!
+            </h4>
+            <h4>Your risk of having COVID-19 is <strong style="color: orangered;">{{finalResult}}</strong></h4>
+
+            <div style="text-align: center; padding:3%;">
+              <div class="btn btn-start" (click)="retakeTest()">Take another test</div>
+            </div>
+
+          </div>
+
+          <div style="text-align: center; padding:3%;">
+            <div *ngIf="button1" class="btn btn-start" (click)="startTest()">Start Your test</div>
+          </div>
+
+        </div>
+        </div>
+
+        <div class="container-fluid">
+
+          <!--Helpline-->
+
+          <table class="table table-striped t0helpline">
+            <thead>
+              <tr>
+                <th scope="col">State</th>
+                <th scope="col">Helpline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Andhra Pradesh</th>
+                <td>08662410978</td>
+              </tr>
+              <tr>
+                <th scope="row">Telangana</th>
+                <td>104</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Tamil Nadu</th>
+                <td>04429510500</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Central</th>
+                <td>011-23978046</td>
+                
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+
+        <div class="container">
+          <div class="container pt-4">
+              <div class="row effect2 p-4" style=" border-radius: 20px; background-color: rgb(252, 253, 253);" >
+
+              <div class=" col-6  ">
+                
+                <div class="cadj" style="text-align: center;">
+                  <circle-progress  
+                  [percent]="recPer"
+                  [radius]="50"
+                  [outerStrokeWidth]="10"
+                  [innerStrokeWidth]="6"
+                  [titleFontSize] = '14'
+                  [outerStrokeColor]="'#9999ff'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="700"
+                ></circle-progress>
+  
+                <h4 class="pl-3 recoveryshade">Recovery Rate</h4>
+                </div>
+                </div>
+
+  
+
+
+              <div class=" col-6 " >
+                <div class="cadj" style="text-align: center;">
+                  <circle-progress 
+                  [percent]="actPer"
+                  [radius]="50"
+                  [outerStrokeWidth]="10"
+                  [innerStrokeWidth]="6"
+                  [titleFontSize] = '14'
+                  [outerStrokeColor]="'#ff8533'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="700"
+                  
+                ></circle-progress>
+                <h4 class="pl-3 activeshade" >Active Rate</h4>
+                </div>
+
+              </div>
+          </div>
+
+          <div class="row effect1 p-3" style="margin-top: 15%; border-radius: 20px; background-color: rgb(252, 253, 253);" >
+
+            <div class="col-6  " style="text-align: center;">
+              <h4  style="font-weight: 500;padding-top:  33%;">Death Rate (Percentage)</h4>
+            </div>
+
+            <div class="col-6" style="text-align: center;">
+              <circle-progress
+              [percent]="decPer"
+              [radius]="50"
+              [outerStrokeWidth]="10"
+              [innerStrokeWidth]="6"
+              [titleFontSize] = '14'
+              [outerStrokeColor]="'#78C000'"
+              [innerStrokeColor]="'#C7E596'"
+              [animation]="true"
+              [animationDuration]="700"
+            ></circle-progress>
+            </div>
+
+
+
+          </div>
+          </div>
+
+      </div>
+        
+
+      </div>
+  
+      <div class="col-sm-6" >
+
+
+        <div class="container" style="padding: 18% 15% 10% 15%;">
+          <div class="d-flex justify-content-center h-100">
+            <div class="searchbar effect0">
+              <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]='term'>
+              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div style=" overflow: auto;   ">
+
+
+        <!--Overall Cases table-->
+
+        <table class="table table-borderless" style="font-family: 'Josefin Sans', sans-serif ;" >
+          <thead>
+            <tr class="t1headers" >
+              <th scope="col" class="confirmed">Confirmed</th>
+              <th scope="col" class="active">Active</th>
+              <th scope="col" class="recovered">Recovered</th>
+              <th scope="col" class="death">Deceased</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="t1todaycases" >
+              <td align="center" class="confirmed" *ngIf="todaysConf >= 0">+{{todaysConf | number}}</td>
+              <td align="center" class="confirmed" *ngIf="todaysConf < 0" >❤</td>
+              <td align="center" class="active">❤</td>
+              <td align="center" class="recovered">+{{todaysRec | number}}</td>
+              <td align="center" class="death">+{{todaysDec | number}}</td>
+            </tr>
+
+            <tr class="t1cases" style=" background-color: transparent;">
+              <td align="center" class="confirmed">{{totalConf | number}}</td>
+              <td align="center" class="active">{{totalAct | number}}</td>
+              <td align="center" class="recovered">{{totalRec | number}}</td>
+              <td align="center" class="death">{{totalDec | number}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+        <!--States table-->
+         
+          <table class="table " >
+            <thead >
+      
+              <tr class="t2header">
+                <th scope="col">State</th>
+                <th scope="col">C</th>
+                <th scope="col">A</th>
+                <th scope="col">R</th>
+                <th scope="col">D</th>
+              </tr>
+      
+            </thead>
+            <tbody>
+      
+              
+
+              <tr  *ngFor="let item of q |filter:term">
+                <th class="statename" scope="row" *ngIf="item.state !== 'Total'" >{{item.state}}</th>
+                <td class="statecases" align="right" *ngIf="item.state !== 'Total'"><caption class="todaysincrease" *ngIf="item.deltaconfirmed > 0;" >+{{item.deltaconfirmed}}</caption >{{item.confirmed | number}}</td>
+                <td class="statecases" align="right" *ngIf="item.state !== 'Total'">{{item.active | number}}</td>
+                <td class="statecases" align="right" *ngIf="item.state !== 'Total'"><caption class="todaysincrease" *ngIf="item.deltarecovered > 0;">+{{item.deltarecovered}}</caption>{{item.recovered | number}}</td>
+                <td class="statecases" align="right" *ngIf="item.state !== 'Total'"><caption class="todaysincrease" *ngIf="item.deltadeaths > 0;">+{{item.deltadeaths}}</caption>{{item.deaths | number}}</td>
+              </tr>
+      
+            </tbody> 
+          </table>
+        
+
+        </div>
+
+
+  
+      </div>
+  
+    </div>
+  
+  </div>
+</div>
+
+

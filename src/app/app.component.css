@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+table  {
+  
+    border-collapse: collapse;
+    
+    width: 100%;
+  }
+  table, th, td {
+    border: 6px solid white;
+    border-radius: 15px;
+  }
+  
+
+  tr:nth-child(even) {
+    background-color: #E0F2F1 ;
+  }
+  
+  th{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    opacity: 1;
+    text-align: center;
+  }
+
+ 
+  td{
+    font-weight: 600;
+    opacity: 0.60;
+  }
+
+
+
+  caption{
+    font-size: x-small; margin: -20px; text-align: right;padding-right: 1.3rem;
+    font-weight: 700;
+    color: red;
+  }
+
+  .confirmed
+  {
+      color: red;
+  }
+
+  .active
+  {
+      color: blue;
+  }
+
+  .recovered
+  {
+      color: orangered;
+  }
+
+  .death
+  {
+      color: rgb(143, 148, 143);
+  }
+
+
+  /*-----------radio buttons style-----------*/
+
+  strong
+  {
+  opacity: 0.8;
+  }
+  
+
+  .t1headers,.t1todaycases{
+    font-size:large;
+    
+  }
+  .t1cases
+  {
+    font-size: x-large;
+  }
+
+  .t2header
+  {
+    font-size: medium;
+  }
+  .t2cases
+  {
+    font-size: medium;
+  }
+  .statecases
+  {
+    font-size: small;
+  }
+  .todaysincrease
+  {
+    font-size: xx-small;
+  }
+
+  .t0helpline
+  {
+    font-size: small;
+  }
+
+  .symImg
+  {
+    height: 180px;
+  }
+
+  .testHeading
+  {
+    padding: 5%;
+  }
+
+  .btn-default:hover {
+    color: #353b48;
+    background: transparent;
+  }
+
+  .btn-default {
+    font-family: Raleway-SemiBold;
+    font-size: 17px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    line-height: 25px;
+    border: 2px solid rgba(108, 89, 179, 0.75);
+    border-radius: 40px;
+    background: rgba(108, 88, 179, 0.75);
+    transition: all 0.3s ease 0s;
+    border-style: none;
+  }
+
+  .btn-next {
+    font-family: Raleway-SemiBold;
+    font-size: 17px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    line-height: 25px;
+    border: 2px solid rgba(108, 89, 179, 0.75);
+    border-radius: 40px;
+    background: rgba(108, 88, 179, 0.75);
+    transition: all 0.3s ease 0s;
+    border-style: none;
+  }
+
+  .btn-start {
+    font-family: Raleway-SemiBold;
+    font-size: 15px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    line-height: 25px;
+    border: 2px solid rgba(108, 89, 179, 0.75);
+    border-radius: 40px;
+    background: rgba(108, 88, 179, 0.75);
+    transition: all 0.3s ease 0s;
+    border-style: none;
+  }
+
+  .btn-start:hover {
+    color:rgb(87, 74, 74);
+    border-style: none;
+    background: rgb(189, 213, 230);
+  }
+
+  .btn-next:hover{
+    border-style: none;
+    color: #353b48;
+  }
+
+
+  .btn-default:focus
+  {
+    background-color: transparent;
+    color: rgb(100, 85, 85);
+    border-style: none;
+  }
+
+  .finalresult
+  {
+    background-color: rgba(208, 218, 245, 0.3);
+    border-radius: 5%;
+    margin-left:  10%;
+    margin-right: 10%;
+  }
+
+  .headinglogo h1
+  {
+    font-family: 'Bree Serif', serif;
+    opacity: 0.8;
+  }
+
+
+
+
+  /*----------Searchbox-style----------*/
+
+  .searchbar{
+    margin-bottom: auto;
+    width: 300px;
+    margin-top: auto;
+    height: 45px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+      color: white;
+      border: 0;
+      outline: 0;
+      background: none;
+      
+      caret-color:transparent;
+      line-height: 27px;
+      transition: width 0.4s linear;
+      }
+
+      searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 450px;
+        caret-color:red;
+        transition: width 0.4s linear;
+      }
+
+      .search_icon{
+        
+        color: #e74c3c;
+      }
+
+      
+    
+        .search_icon{
+        height: 30px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:white;
+        text-decoration:none;
+        }
+
+
+  /*-------Media Queries--------*/
+
+  @media only screen and (max-width: 380px)
+  {
+    .search_icon{
+      visibility:hidden;
+      }
+
+  }
+
+
+  @media only screen and (max-width: 510px) {
+    .symImg
+    {
+      height: 120px;
+    }
+
+    .t0helpline
+    {
+      font-size: small;
+    }
+    img{
+      padding:7%;
+    }
+
+    .t1headers,.t1todaycases{
+      font-size: medium;
+      
+    }
+    .t1cases
+    {
+      font-size: large;
+    }
+
+    td{
+      font-weight: 600;
+      opacity: 0.63;
+    }
+
+    .statecases
+    {
+      font-size: smaller;
+    }
+  
+    .t2header
+    {
+      font-size: small;
+    }
+
+
+
+    .finalresult
+    {
+      background-color: rgba(208, 218, 245, 0.3);
+      border-radius: 5%;
+      margin-left:  0%;
+      margin-right: 0%;
+    }
+    
+
+    
+  }
+  
+
+
+  
+  /*----------Shadows---------*/
+
+
+  .effect2{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect2:before, .effect2:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect2:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+
+  
+
+
+.effect1
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect1:before, .effect1:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect1:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+.effect0{
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+
+.effect6
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:100%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect6:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+
+@media only screen and (max-width: 450px) and (min-device-width: 400px){
+  
+  .cadj
+  {
+    margin-left: -20%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) and (min-device-width: 320px) {
+  
+  .cadj
+  {
+    margin-left: -30%;
+  }
+}
+
+
